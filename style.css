@@ -1,0 +1,15 @@
+table,th,td
+{
+  border: 1px solid;
+  border-collapse: collapse;
+}
+.side{
+  display: none;
+  width: 100%;
+}
+.slider
+{
+  width: 50%;
+  height: 25px;
+  transform: translate(0,40%);
+}
