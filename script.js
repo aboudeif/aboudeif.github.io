@@ -1,5 +1,29 @@
 function load(){
+  document.getElementById('pallet').innerHTML = "<div style='color:gold;'>Select a shape [ &#9651; or &#9633; ] to start <br>اختر شكلاً [ &#9651; أو &#9633; ] للبدء</div>";
+}
+function set_history(history) {
+  var shape = document.getElementById('shape').value;
+  var pallet = document.getElementById('pallet').innerHTML;
+  history[history.length] = "<div class='element'>"+(history.length+1)+"- "+shape+" at "+ new Date()+"<table id='_"+history.length+"'>"+document.getElementById('table_body').innerHTML+"</table></div>";
+  sessionStorage.setItem("h_",JSON.stringify(history));
+}
+function get_history() {
+  var history = [];
+    
+  if (sessionStorage.getItem('h_')){
+  history  = JSON.parse(sessionStorage.getItem('h_'));
+  set_history(history);
+  for(var item in history)
+    document.getElementById('history').innerHTML +="<label></label>"+history[item];
   
+     }
+  else{
+    set_history(history);
+     history  = JSON.parse(sessionStorage.getItem('h_'));
+    for(var item in history)
+      document.getElementById('history').innerHTML +="<label></label>"+history[item];
+  }
+   
 }
 function check(id) {
   document.getElementById('triangle_shape').classList.remove('checked');
@@ -51,7 +75,6 @@ document.getElementById('pallet').innerHTML = "<style>.square {margin: 0 auto;ba
 
 document.getElementById('info').innerHTML = "<label>Left side ="+slider+" cm</label><br><label>Right side ="+slider+" cm</label><br><label>Bottom side ="+slider+" cm</label><br><label>Top side ="+slider+" cm</label><br>";
 document.getElementById('table').innerText = '';
-//change(document.getElementById('submit').click();
 }
 if(id[5] == 't'){
 
@@ -62,7 +85,7 @@ document.getElementById('h_t_r').value = Math.hypot(slid['r'],slid['b']);
 document.getElementById('h_t_b').value = parseFloat(slid['r'])+parseFloat(slid['l']);
 document.getElementById('pallet').innerHTML = "<style>.triangle {margin: 0 auto;position: relative;width: 0;height: 0;border-right: "+slid['r']+"cm solid transparent;border-bottom: "+slid['b']+"cm solid cadetblue;border-left: "+slid['l']+"cm solid transparent;}</style><div class='triangle'></div>";
 
-document.getElementById('info').innerHTML = "<label>Left side ="+Math.hypot(slid['l'],slid['b'])+" cm</label><br><label>Right side ="+Math.hypot(slid['r'],slid['b'])+"cm</label><br><label>Bottom side ="+parseFloat(slid['r'] + slid['l'])+" cm</label><br>";
+document.getElementById('info').innerHTML = "<label>Left side ="+Math.hypot(slid['l'],slid['b'])+" cm</label><br><label>Right side ="+Math.hypot(slid['r'],slid['b'])+" cm</label><br><label>Bottom side ="+parseFloat(slid['r'] + slid['l'])+" cm</label><br>";
 document.getElementById('table').innerHTML = '';
   }
 }

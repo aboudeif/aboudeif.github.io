@@ -1,0 +1,116 @@
+table,th,td
+{
+  border: 1px solid;
+  border-collapse: collapse;
+}
+th
+{
+ border: 1px solid gold;
+ padding: 2px 10px 2px 30px;
+ color: gray;
+ background-color: gold;
+ font-weight: 200;
+}
+td
+{
+  text-align: center;
+  border: 1px solid gold;
+  padding: 1.3px 40px 1.3px 10px;
+  color: darkcyan;
+}
+#info
+{
+  
+  margin-left: 25px;
+  padding: 5px 25px 0;
+  width: 500px;
+  height: 90px;
+  position: absolute;
+  left: 0;
+  top: 320px;
+  color: gray;
+}
+#table
+{
+  width: max-content;
+  margin-top: 70px;
+  margin-left: 18px;
+  position: absolute;
+  left: 0;
+  top: 310px;
+}
+#pallet
+{
+  position: relative;
+  float: left;
+  width: 70%;
+  margin: 520px 50px 50px 50px;
+}
+
+caption
+{
+  padding: 10px;
+  color: gray;
+  
+}
+.right_panel,top_right_panel
+{
+  position: absolute;
+  float: left;
+  left: 100%;
+  top: 60px;
+  padding: 10px;
+  width: 50%;
+  height: 400px;
+  color: darkcyan;
+  box-shadow: 0 0 10px inset gray;
+  
+  overflow: scroll;
+  transform: translate(-100%,0);
+  z-index: 200;
+}
+.top_right_panel
+{
+  position: absolute;
+  float: left;
+  left: 100%;
+  padding: 10px;
+  width: 50%;
+  color: darkcyan;
+  font-weight: bolder;
+  transform: translate(-100%,0);
+}
+.tab
+{
+  width: 70px;
+  height: 30px;
+  padding:20px;
+  margin-left: 20px;
+  margin-top: 20px;
+  text-align: center;
+  border: 1px solid gray;
+  color: darkcyan;
+}
+#history,#information
+{
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  padding-top: 40px;
+}
+.element
+{
+  position: relative;
+  z-index: 100;
+}
+.element > *
+{
+  color: gray;
+}
+.element:hover
+{
+  {
+  zoom: 1.1;
+  box-shadow: 0 0 10px gray;
+  cursor: pointer;
+}
