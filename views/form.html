@@ -1,28 +1,33 @@
 <?php
 echo "
     <form method='POST'>
-        <div class='shape-selector'><div id='triangle_shape' class='selector' onclick='check(this.id);'>&#9651;</div><div id='square_shape' class='selector' onclick='check(this.id);'>&#9633;</div><button type='submit' name='submit' id='submit'>Calcuate Area</button></div>
+        <div class='shape-selector'><div id='triangle_shape' class='selector' onclick='check(this.id);'>&#9651;</div><div id='rectangle_shape' class='selector' onclick='check(this.id);'>&#9645;</div><div id='square_shape' class='selector' onclick='check(this.id);'>&#9633;</div><button type='submit' name='submit' id='submit'>Calcuate Area</button></div>
               <select name='shape' id='shape' onChange='select_shape(this.value);'>
                 <option value='' disabled selected>Select Shape</option>
                 <option name='square' value='square'>Square</option>
+                <option name='rectangle' value='rectangle'>Rectangle</option>
                 <option name='triangle' value='triangle'>Triangle</option>
               </select>
               <div class='select-square'></div>
               
               <br><br>
               <div class='scals'>
-              <div class='side sq' id='side_s_r'><input id='slid_s_r' type='range' name='side' min='1.00' max='30.00' step='0.01' value='1.00' class='slider' oninput='change(this.id);'></div>
+              <div class='side sq' id='side_s_r'><input id='slid_s_r' type='range' name='side' min='0' max='30.00' step='0.01' value='0' class='slider' oninput='change(this.id);'></div>
               <div class='side sq' id='side_s_b'>
-              <input id='slid_s_b' type='range' min='1.00' max='30.00' step='0.01' value='1.00' class='slider' disabled></div>
+              <input id='slid_s_b' type='range' min='0' max='30.00' step='0.01' value='0' class='slider' disabled></div>
               <div class='side sq' id='side_s_l'>
-              <input id='slid_s_l' type='range' min='1.00' max='30.00' step='0.01' value='1.00' class='slider' disabled></div>
+              <input id='slid_s_l' type='range' min='0' max='30.00' step='0.01' value='0' class='slider' disabled></div>
               <div class='side sq' id='side_s_t'>
-              <input id='slid_s_t' type='range' min='1.00' max='30.00' step='0.01' value='1.00' class='slider' disabled></div>
-              <div id='h_history' name='h_history' style='display: none;' ></div>
+              <input id='slid_s_t' type='range' min='0' max='30.00' step='0.01' value='0' class='slider' disabled></div>
 
-              <div class='side tr' id='side_t_r'><div class='side_label' id='label_t_r'></div><input id='slid_t_r' type='range' name='slid_t_r' min='1.00' max='50.00' step='0.01' value='1.00' class='slider' oninput='change(this.id);'><input type='hidden' id='h_t_r' name='h_t_r'></div>
-                <div class='side tr' id='side_t_b'><div class='side_label' id='label_t_b'></div><input id='slid_t_b' type='range' name='slid_t_b' min='1.00' max='50.00' step='0.01' value='1.00' class='slider' oninput='change(this.id);'><input type='hidden' id='h_t_b' name='h_t_b'></div>
-                <div class='side tr' id='side_t_l'><div class='side_label' id='label_t_l'></div><input id='slid_t_l' type='range' name='slid_t_l' min='1.00' max='50.00' step='0.01' value='1.00' class='slider' oninput='change(this.id);'><input type='hidden' id='h_t_l' name='h_t_l'></div>
+              <div class='side rq' id='side_r_r'><input id='slid_r_r' type='range' name='slid_r_r' min='0' max='30.00' step='0.01' value='0' class='slider' oninput='change(this.id);'></div>
+              <div class='side rq' id='side_r_l'><input id='slid_r_l' type='range' min='0' max='30.00' step='0.01' value='0' class='slider' disabled></div>              
+              <div class='side rq' id='side_r_t'><input id='slid_r_t' type='range' name='slid_r_t' min='0' max='30.00' step='0.01' value='0' class='slider' oninput='change(this.id);'></div>
+              <div class='side rq' id='side_r_t'><input id='slid_r_b' type='range' min='0' max='30.00' step='0.01' value='0' class='slider' disabled></div>
+
+              <div class='side tr' id='side_t_r'><div class='side_label' id='label_t_r'></div><input id='slid_t_r' type='range' name='slid_t_r' min='0' max='50.00' step='0.01' value='0' class='slider' oninput='change(this.id);'><input type='hidden' id='h_t_r' name='h_t_r'></div>
+                <div class='side tr' id='side_t_b'><div class='side_label' id='label_t_b'></div><input id='slid_t_b' type='range' name='slid_t_b' min='0' max='50.00' step='0.01' value='0' class='slider' oninput='change(this.id);'><input type='hidden' id='h_t_b' name='h_t_b'></div>
+                <div class='side tr' id='side_t_l'><div class='side_label' id='label_t_l'></div><input id='slid_t_l' type='range' name='slid_t_l' min='0' max='50.00' step='0.01' value='0' class='slider' oninput='change(this.id);'><input type='hidden' id='h_t_l' name='h_t_l'></div>
         </div>
     
           </form>

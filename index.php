@@ -11,6 +11,7 @@
     include "app/Shape.php";
     include "app/Square.php";
     include "app/Triangle.php";
+    include "app/Rectangle.php";
     include "views/form.html";
     include "views/panels.html";
     
@@ -35,6 +36,14 @@ if(isset($_POST['shape'])){
         echo "<script>document.getElementById('calculations').innerHTML += ".$triangle->print_().";</script>";
         echo "<script>get_history();</script>";
         // echo "<script>set_history();</script>";
+      }
+  if($_POST['shape'] == 'rectangle'){
+        
+         echo "<script>fill_data(".$_POST['slid_r_r'].",".$_POST['slid_r_t'].");</script>";
+         echo "<script>check('".$_POST['shape']."_shape');</script>";
+        $rectangle = new Rectangle($_POST['slid_r_r'],$_POST['slid_r_t']);
+         echo "<script>document.getElementById('calculations').innerHTML += ".$rectangle->print_().";</script>";
+         echo "<script>get_history();</script>";
       }
     }
 else

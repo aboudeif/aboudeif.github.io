@@ -1,3 +1,7 @@
+body
+{
+  margin: 5px;
+}
 .side{
   display: none;
   width: 100%;
@@ -48,14 +52,26 @@ form
   box-shadow: 0 0 10px gray;
   cursor: pointer;
 }
+#submit
+{
+  position: absolute;
+  float: right;
+  margin-left: 150px;
+}
 .checked
 {
-  
   box-shadow: 0 0 10px #f3f3f3;
   color: gold;
   background-color: #f3f3f3;
 }
 #triangle_shape
+{
+  padding-top: 25px;
+  height: 65px;
+  font-size: 26pt;
+  
+}
+#rectangle_shape
 {
   padding-top: 25px;
   height: 65px;

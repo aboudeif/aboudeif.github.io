@@ -107,10 +107,14 @@ caption
 {
   color: gray;
 }
-.element:hover
+b
 {
-  {
+  font-size: 16pt;
+  font-weight: bolder;
+}
+/* .element:hover
+{
   zoom: 1.1;
   box-shadow: 0 0 10px gray;
   cursor: pointer;
-}
+} */
