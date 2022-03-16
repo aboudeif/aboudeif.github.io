@@ -1,7 +1,0 @@
-1- user will drow shape using javascript
-2- user will click calc area button
-3- javaScript will convert sliders values to [hypots,base, height] measuers and show them along to shape
-4- php will receive a post with [base, height]
-5- php will print a info table contains area
-→ 6- calculated elements will be added to history panel where user can see and restore it
-→ 7- threre will be two tabs on right [history and info]
